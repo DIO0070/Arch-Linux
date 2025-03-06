@@ -32,3 +32,21 @@ Una distribución personalizada de Arch Linux que emula la experiencia de SteamO
 ```bash
 # Paquetes esenciales
 sudo pacman -S --needed git xorg plasma-desktop steam vulkan-radeon lib32-vulkan-radeon
+
+## Componentes SteamOS
+
+# Gamescope (AUR)
+git clone https://aur.archlinux.org/gamescope.git
+cd gamescope && makepkg -si
+
+# Auto-Big Picture
+mkdir -p ~/.config/autostart
+echo -e "[Desktop Entry]\nType=Application\nExec=steam -bigpicture\nX-GNOME-Autostart-enabled=true" > ~/.config/autostart/steam.desktop
+
+# Personalización 🎨
+
+## Tema KDE
+
+# SteamOS-BPM Theme
+git clone https://github.com/scottashipp/SteamOS-BPM-KDE.git
+cd SteamOS-BPM-KDE && ./install.sh
