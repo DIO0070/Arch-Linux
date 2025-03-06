@@ -1,14 +1,34 @@
-# Mi Configuración de Arch Linux 🐧
+# ArchOS Steam Edition 🎮
 
-Personalización de Arch Linux con i3wm, Polybar y temas personalizados.
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![Arch Linux](https://img.shields.io/badge/Arch_Linux-1793D1?logo=arch-linux&logoColor=fff)
 
-## Características
-- Dotfiles para i3, Polybar y Bash.
-- Scripts de instalación automática.
-- Temas GTK e iconos Papirus.
+Una distribución personalizada de Arch Linux que emula la experiencia de SteamOS. **No oficial** y sin afiliación con Valve.
 
-## Instalación
+---
+
+## Características ✨
+- Autoinicio en Steam Big Picture Mode
+- Entorno KDE Plasma personalizado (similar a SteamOS 3)
+- Optimizaciones para gaming:
+  - Gamescope (compositor FSR/VRS)
+  - Btrfs con compresión
+  - Drivers Vulkan y 32-bit
+- Configuraciones listas para consola/TV
+
+---
+
+## Instalación ⚙️
+
+### Requisitos
+- CPU x86_64
+- 4 GB RAM (recomendado 8+ GB)
+- GPU compatible con Vulkan (AMD/NVIDIA/Intel)
+- Conexión a internet
+
+### Pasos Base
+1. Instalar Arch Linux ([Guía Oficial](https://wiki.archlinux.org/title/Installation_guide)).
+2. Ejecutar:
 ```bash
-git clone https://github.com/tu-usuario/my-arch-config.git
-cd my-arch-config
-./scripts/setup-wm.sh
+# Paquetes esenciales
+sudo pacman -S --needed git xorg plasma-desktop steam vulkan-radeon lib32-vulkan-radeon
